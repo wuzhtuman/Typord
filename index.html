@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typord小站</title>
+    <!-- 引入Font Awesome图标库的CSS文件（通过CDN方式） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" />
+    <!-- 添加这行代码指定fav图标，href属性里的路径根据实际图标位置进行调整 -->
+    <link rel="shortcut icon" href="./logo.jpg" type="image/x-icon">
+    <style>
+        /* 整体页面通用样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('./bcs1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* 头像图片样式 */
+      .avatar {
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-image: url('./logo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 根据不同分辨率范围调整头像尺寸 */
+            width: 12vw;
+            min-width: 80px;
+            max-width: 180px;
+            height: 12vw;
+            min-height: 80px;
+            max-height: 180px;
+            margin-bottom: 20px;
+            /* 添加过渡效果，让旋转动画更平滑 */
+            transition: transform 0.5s ease;
+        }
+
+        /* 鼠标悬停在头像上时的旋转特效 */
+      .avatar:hover {
+            transform: rotate(360deg);
+        }
+
+        /* 标题样式 */
+        h1 {
+            display: none;
+        }
+
+        /* 链接容器样式 */
+      .link-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* 链接样式（圆形图标） */
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        a i {
+            font-size: 30px;
+        }
+
+        /* 媒体查询，针对不同屏幕宽度进行样式调整 */
+        @media screen and (max-width: 1200px) {
+          .avatar {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+          .avatar {
+                width: 18vw;
+                height: 18vw;
+            }
+
+          .link-container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+          .avatar {
+                width: 20vw;
+                height: 20vw;
+            }
+
+          .link-container {
+                padding: 15px;
+            }
+        }
+
+        /* 页脚备案信息样式 */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="avatar"></div>
+    <div class="link-container">
+        <!-- 微博链接及圆形图标 -->
+        <a href="https://www.cnblogs.com/wzh" target="_blank">
+            <i class="fas fa-globe"></i>
+        </a>
+        <!-- 知乎链接及圆形图标 -->
+        <a href="https://typord.com" target="_blank">
+            <i class="fas fa-blog"></i>
+        </a>
+        <!-- 笔记链接及圆形图标 -->
+        <a href="https://www.notion.so/wuzhenhua/Personal-Website-16524605415180e3b9bded7428362589?pvs=4" target="_blank">
+            <i class="fas fa-book"></i>
+        </a>
+        <!-- 你可以按照上面的格式继续添加更多平台的链接及圆形图标，替换对应的网址和用户名即可 -->
+    </div>
+    <footer>
+        版权所有：Typord - 吴
+    </footer>
+</body>
+
+</html>
